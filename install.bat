@@ -39,7 +39,7 @@ NET SESSION >nul 2>&1
 
     )
 
-goto :eof 
+EXIT /B 0
 
 :installChocolately
 
@@ -52,8 +52,7 @@ goto :eof
 
     pause
 
-goto :eof 
-
+EXIT /B 0
 
 
 :installSoftware
@@ -66,7 +65,7 @@ goto :eof
     :: clear the screen 
     clear 
 
-goto :eof 
+EXIT /B 0
 
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
