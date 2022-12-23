@@ -55,9 +55,9 @@ EXIT /B 0
 EXIT /B 0
 
 
-:installSoftware
+:installSingleApp
     echo Installing %~1
-    choco install %~1 
+    cinst %~1 
 
     :: do a sleep type command to pause for a second or two ... maybe find a way to have the user have to hit enter and comment that out (so its off by default but if a user wants to be prompted, that is doable too )
     :: timeout /t 3
@@ -67,7 +67,11 @@ EXIT /B 0
 
 EXIT /B 0
 
+:installMultipleApps
+    echo Installing %~1
+    cisinst %~1 
 
+EXIT /B 0
 ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 call :checkForAdmin
